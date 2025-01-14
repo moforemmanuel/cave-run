@@ -7,7 +7,7 @@
 #include "Character.h"
 
 namespace CaveRun {
-    class Player: public Character {
+    class Player : public Character {
         int health;
         bool isPoisoned;
 
@@ -17,6 +17,7 @@ namespace CaveRun {
         ~Player() override;
 
         void takeDamage(const int damage);
+
     };
 
 } // CaveRun

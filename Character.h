@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <vector>
-#include "Room.h"
+// #include "Room.h"
 #include "Game.h"
 
 namespace CaveRun {
@@ -16,11 +16,13 @@ namespace CaveRun {
         std::string name;
         std::string color;
         char label;
+        int initialMoves;
         int moves;
         std::vector<int> currentRoomPosition;
 
     public:
-        Character(std::string _id, std::string _name, const std::string &_color, char _label, int _moves, const std::vector<int> &_currentRoomPosition);
+        Character(std::string _id, std::string _name, const std::string &_color, char _label, int _initialMoves, int _moves,
+                  const std::vector<int> &_currentRoomPosition);
 
         virtual ~Character();
 
@@ -33,10 +35,10 @@ namespace CaveRun {
         void setMoves(const int _moves) { this->moves = _moves; }
 
         bool canMove(const Game& game) const;
-        virtual void resetMove();
-        std::vector<int> move(const Room& room);
-        virtual void sense(const Game& game) const;
-        virtual void update();
+        virtual void resetMoves();
+        std::vector<int> move(const std::vector<int> &position);
+        // virtual void sense(const Game& game) const;
+        // virtual void update();
         virtual void draw();
     };
 

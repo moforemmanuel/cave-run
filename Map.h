@@ -7,9 +7,11 @@
 
 #include <iostream>
 #include <vector>
-#include "Room.h"
+// #include "Room.h"
 
 namespace CaveRun {
+    class Room;
+
     class Map {
         std::vector<std::vector<Room*>> grid;
         int rows, cols;
@@ -19,7 +21,10 @@ namespace CaveRun {
         ~Map();
 
         void addRoom(Room *room);
-        Room* getRoom(int x, int y);
+        Room* getRoom(int x, int y) const;
+
+        void setRoom(int x, int y, Room *room);
+
         std::pair<int, int> getDimensions() const;
 
     };

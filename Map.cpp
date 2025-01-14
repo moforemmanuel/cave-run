@@ -3,6 +3,7 @@
 //
 
 #include "Map.h"
+#include "Room.h"
 
 namespace CaveRun {
     // Map::Map(int _rows, int _cols): rows(_rows), cols(_cols) {

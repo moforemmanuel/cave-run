@@ -6,7 +6,7 @@
 
 namespace CaveRun {
     Player::Player(std::vector<int> _currentRoomPosition)
-    : Character("player", "player", "blue", 'P', 2, _currentRoomPosition) {
+    : Character("player", "player", "blue", 'P', 2, 2, _currentRoomPosition) {
         health = 100;
         isPoisoned = false;
     }
@@ -20,4 +20,6 @@ namespace CaveRun {
             exit(0);
         }
     }
+
+
 } // CaveRun

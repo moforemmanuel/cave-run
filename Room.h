@@ -7,26 +7,28 @@
 
 #include <iostream>
 #include <vector>
-#include "Player.h"
+// #include "Player.h"
 
 namespace CaveRun {
-        class Room {
-            std::string id;
-            std::vector<int> position;
-            std::string color;
-            char label;
+    class Player;
 
-        public:
-            Room(std::string _id, std::vector<int> _position, std::string _color, char _label);
+    class Room {
+        std::string id;
+        std::vector<int> position;
+        std::string color;
+        char label;
 
-            virtual ~Room();
+    public:
+        Room(std::string _id, std::vector<int> _position, std::string _color, char _label);
 
-            std::string getId() const { return id; }
-            std::vector<int> getPosition() const { return position; }
-            std::string getColor() const { return color; }
+        virtual ~Room();
 
-            virtual void visit(Player& player) const;
-        };
+        std::string getId() const { return id; }
+        std::vector<int> getPosition() const { return position; }
+        std::string getColor() const { return color; }
+
+        virtual void visit(Player& player) const;
+    };
 
 } // CaveRun
 

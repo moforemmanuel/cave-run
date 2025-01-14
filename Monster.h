@@ -9,13 +9,13 @@
 
 namespace CaveRun {
 
-class Monster: public Character {
+    class Monster : public Character {
 
-public:
-    Monster(const std::vector<int> &_currentRoomPosition);
+    public:
+        Monster(const std::vector<int> &_currentRoomPosition);
 
-    ~Monster() override;
-};
+        ~Monster() override;
+    };
 
 } // CaveRun
 

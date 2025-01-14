@@ -6,7 +6,7 @@
 
 namespace CaveRun {
     Monster::Monster(const std::vector<int>& _currentRoomPosition)
-    : Character("monster", "monster", "red", 'M', 1, _currentRoomPosition) {}
+    : Character("monster", "monster", "red", 'M', 1, 1, _currentRoomPosition) {}
 
     Monster::~Monster() {}
 

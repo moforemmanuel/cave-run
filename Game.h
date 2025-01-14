@@ -26,7 +26,7 @@ class Game {
     const Character *activeCharacter;
 
 public:
-    Game(const Map &_map, const Player &_player, const Monster &_monster, const std::vector<int> &_startRoomPosition, const std::vector<int> &_endRoomPosition);
+    Game(int rows, int cols, const std::vector<int> &_startRoomPosition, const std::vector<int> &_endRoomPosition);
     ~Game();
 
     const Character* getActiveCharacter() const { return activeCharacter; }

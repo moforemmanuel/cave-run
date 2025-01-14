@@ -20,6 +20,9 @@ namespace CaveRun {
         bool isPoisoned() const { return poisoned; }
         void setIsPoisoned() { poisoned = true; }
 
+        int getHealth() const { return health; }
+        void setHealth(int _health) { health = _health; }
+
         void takeDamage(const int damage);
 
         std::vector<int> move(const std::vector<int> &position, const PoisonRoom &poisonRoom);

@@ -24,7 +24,7 @@ namespace CaveRun {
         }
     }
 
-    std::vector<int> Player::move(const std::vector<int> &position, const PoisonRoom &poisonRoom) {
+    std::vector<int> Player::move(const std::vector<int> &position, PoisonRoom &poisonRoom) {
         setCurrentRoomPosition(position);
 
         if (isPoisoned()) { takeDamage(poisonRoom.getPoisonDamage()); }

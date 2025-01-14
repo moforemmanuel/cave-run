@@ -19,7 +19,7 @@ namespace CaveRun {
         char label;
 
     public:
-        Room(std::string _id, std::vector<int> _position, std::string _color, char _label);
+        Room(std::string _id, std::vector<int> _position, std::string _color);
 
         virtual ~Room();
 

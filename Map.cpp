@@ -20,6 +20,22 @@ namespace CaveRun {
         }
     }
 
+    void Map::addRoom(Room *room) {
+        std::vector<int> pos = room->getPosition();
+        if (pos.size() == 2) { // Check if the vector has two elements
+            int x = pos[0];
+            int y = pos[1];
+            // ... use x and y
+
+            grid[y][x] = room;
+        } else {
+            std::cerr << "Error: Room position vector has incorrect size." << std::endl;
+            // Handle the error appropriately (e.g., throw an exception)
+        }
+
+    }
+
+
 
     Room* Map::getRoom(int x, int y) const {
         if (x >= 0 && x < cols && y >= 0 && y < rows) {

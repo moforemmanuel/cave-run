@@ -6,8 +6,8 @@
 #include "Player.h"
 
 namespace CaveRun {
-    PoisonRoom::PoisonRoom(std::string _id, std::vector<int> _position, std::string _color, char _label, int _poisonDamage):
-    Room(_id, _position, _color, _label), poisonDamage(_poisonDamage) {}
+    PoisonRoom::PoisonRoom(std::string _id, std::vector<int> _position, std::string _color, int _poisonDamage):
+    Room(_id, _position, _color), poisonDamage(_poisonDamage) {}
 
     void PoisonRoom::visit(Player& player) const {
         player.takeDamage(poisonDamage);

@@ -6,7 +6,7 @@
 #include "Room.h"
 
 namespace CaveRun {
-    Room::Room(std::string _id, std::vector<int> _position, std::string _color, char _label):id(std::move(_id)), color(_color), label(_label) {
+    Room::Room(std::string _id, std::vector<int> _position, std::string _color):id(std::move(_id)), color(_color) {
         if (_position.size() != 2) {
             throw std::invalid_argument("Position vector must have size 2.");
         }

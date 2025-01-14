@@ -26,7 +26,7 @@ namespace CaveRun {
 
         void takeDamage(const int damage);
 
-        std::vector<int> move(const std::vector<int> &position, const PoisonRoom &poisonRoom);
+        std::vector<int> move(const std::vector<int> &position, PoisonRoom &poisonRoom);
 
         void sense(const Game& game) const override;
     };

@@ -13,7 +13,7 @@ class TrapRoom : public Room {
     int trapDamage;
 
 public:
-    TrapRoom(std::string _id, std::vector<int> _position, std::string _color, char _label, int _trapDamage);
+    TrapRoom(std::string _id, std::vector<int> _position, std::string _color, int _trapDamage);
 
     int getTrapDamage() const { return trapDamage; }
 

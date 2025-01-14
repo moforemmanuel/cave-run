@@ -13,7 +13,7 @@ namespace CaveRun {
         int poisonDamage;
 
     public:
-        PoisonRoom(std::string _id, std::vector<int> _position, std::string _color, char _label, int _poisonDamage);
+        PoisonRoom(std::string _id, std::vector<int> _position, std::string _color, int _poisonDamage);
 
         int getPoisonDamage() const { return poisonDamage; }
 

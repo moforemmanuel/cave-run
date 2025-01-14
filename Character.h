@@ -32,6 +32,13 @@ namespace CaveRun {
         int getMoves() const { return moves; }
         std::string getColor() const { return color; }
 
+        std::vector<int> getCurrentRoomPosition() const { return currentRoomPosition; }
+
+        void setCurrentRoomPosition(const std::vector<int> &newPostition) {
+            currentRoomPosition[0] += newPostition[0];
+            currentRoomPosition[1] += newPostition[1];
+        }
+
         void setMoves(const int _moves) { this->moves = _moves; }
 
         bool canMove(const Game& game) const;

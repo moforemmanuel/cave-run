@@ -18,4 +18,6 @@ add_executable(CaveRun main.cpp
         Monster.h
         TrapRoom.cpp
         TrapRoom.h
+        PoisonRoom.cpp
+        PoisonRoom.h
 )

@@ -97,6 +97,12 @@ build CMakeFiles/CaveRun.dir/TrapRoom.cpp.o: CXX_COMPILER__CaveRun_unscanned_Deb
   OBJECT_DIR = CMakeFiles/CaveRun.dir
   OBJECT_FILE_DIR = CMakeFiles/CaveRun.dir
 
+build CMakeFiles/CaveRun.dir/PoisonRoom.cpp.o: CXX_COMPILER__CaveRun_unscanned_Debug /home/manuel/CLionProjects/CaveRun/PoisonRoom.cpp || cmake_object_order_depends_target_CaveRun
+  DEP_FILE = CMakeFiles/CaveRun.dir/PoisonRoom.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/CaveRun.dir
+  OBJECT_FILE_DIR = CMakeFiles/CaveRun.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CaveRun
@@ -105,7 +111,7 @@ build CMakeFiles/CaveRun.dir/TrapRoom.cpp.o: CXX_COMPILER__CaveRun_unscanned_Deb
 #############################################
 # Link the executable CaveRun
 
-build CaveRun: CXX_EXECUTABLE_LINKER__CaveRun_Debug CMakeFiles/CaveRun.dir/main.cpp.o CMakeFiles/CaveRun.dir/Character.cpp.o CMakeFiles/CaveRun.dir/Room.cpp.o CMakeFiles/CaveRun.dir/Player.cpp.o CMakeFiles/CaveRun.dir/Map.cpp.o CMakeFiles/CaveRun.dir/Game.cpp.o CMakeFiles/CaveRun.dir/Monster.cpp.o CMakeFiles/CaveRun.dir/TrapRoom.cpp.o
+build CaveRun: CXX_EXECUTABLE_LINKER__CaveRun_Debug CMakeFiles/CaveRun.dir/main.cpp.o CMakeFiles/CaveRun.dir/Character.cpp.o CMakeFiles/CaveRun.dir/Room.cpp.o CMakeFiles/CaveRun.dir/Player.cpp.o CMakeFiles/CaveRun.dir/Map.cpp.o CMakeFiles/CaveRun.dir/Game.cpp.o CMakeFiles/CaveRun.dir/Monster.cpp.o CMakeFiles/CaveRun.dir/TrapRoom.cpp.o CMakeFiles/CaveRun.dir/PoisonRoom.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/CaveRun.dir
   POST_BUILD = :

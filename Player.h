@@ -5,18 +5,24 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "Character.h"
+#include "PoisonRoom.h"
 
 namespace CaveRun {
     class Player : public Character {
         int health;
-        bool isPoisoned;
+        bool poisoned;
 
     public:
         Player(std::vector<int> _currentRoomPosition);
 
         ~Player() override;
 
+        bool isPoisoned() const { return poisoned; }
+        void setIsPoisoned() { poisoned = true; }
+
         void takeDamage(const int damage);
+
+        std::vector<int> move(const std::vector<int> &position, const PoisonRoom &poisonRoom);
 
     };
 

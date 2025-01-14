@@ -22,9 +22,8 @@ namespace CaveRun {
     }
 
     std::vector<int> Character::move(const std::vector<int> &position) {
-        currentRoomPosition[0] + position[0];
-        currentRoomPosition[1] + position[1];
-        return position;
+        setCurrentRoomPosition(position);
+        return getCurrentRoomPosition();
     }
 
     void Character::draw() {

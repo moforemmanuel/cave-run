@@ -4,11 +4,13 @@
 
 #include "Player.h"
 
+#include "PoisonRoom.h"
+
 namespace CaveRun {
     Player::Player(std::vector<int> _currentRoomPosition)
     : Character("player", "player", "blue", 'P', 2, 2, _currentRoomPosition) {
         health = 100;
-        isPoisoned = false;
+        poisoned = false;
     }
 
     Player::~Player() {}
@@ -19,6 +21,13 @@ namespace CaveRun {
             std::cout << "Player died!" << std::endl;
             exit(0);
         }
+    }
+
+    std::vector<int> Player::move(const std::vector<int> &position, const PoisonRoom &poisonRoom) {
+        setCurrentRoomPosition(position);
+
+        if (isPoisoned()) { takeDamage(poisonRoom.getPoisonDamage()); }
+        return getCurrentRoomPosition();
     }
 
 

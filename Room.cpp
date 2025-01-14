@@ -16,7 +16,7 @@ namespace CaveRun {
     Room::~Room() {};
 
     void Room::visit(Player &player) const {
-
+        // for normal rooms do nothing
     }
 
 

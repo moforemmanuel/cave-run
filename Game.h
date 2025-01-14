@@ -10,6 +10,8 @@
 // #include "Player.h"
 // #include "Monster.h"
 #include "Map.h"
+// #include "Monster.h"
+// #include "Player.h"
 
 namespace CaveRun {
 
@@ -17,27 +19,30 @@ namespace CaveRun {
     class Monster; // Forward declaration
     class Character;
 
-class Game {
-    Map *map;
-    Player *player;
-    Monster *monster;
-    std::vector<int> startRoomPosition;
-    std::vector<int> endRoomPosition;
-    const Character *activeCharacter;
+    class Game {
+        Map *map;
+        Player *player;
+        Monster *monster;
+        std::vector<int> startRoomPosition;
+        std::vector<int> endRoomPosition;
+        const Character *activeCharacter;
+        int rows, cols;
 
-public:
-    Game(int rows, int cols, const std::vector<int> &_startRoomPosition, const std::vector<int> &_endRoomPosition);
-    ~Game();
+    public:
+        Game(int _rows, int _cols, const std::vector<int> &_startRoomPosition, const std::vector<int> &_endRoomPosition);
+        ~Game();
 
-    const Character* getActiveCharacter() const { return activeCharacter; }
-    void setActiveCharacter(const Character* character) { activeCharacter = character; }
+        const Character* getActiveCharacter() const { return activeCharacter; }
+        void setActiveCharacter(const Character* character) { activeCharacter = character; }
 
+        std::vector<int> getMonsterPosition() const;
+        std::vector<int> getPlayerPosition() const;
 
-    void initialize();
-    void run();
-    void endGame();
-    bool checkGameOver();
-};
+        void initialize();
+        void run();
+        void endGame();
+        bool checkGameOver();
+    };
 
 } // CaveRun
 

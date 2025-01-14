@@ -5,6 +5,7 @@
 #include "Player.h"
 
 #include "PoisonRoom.h"
+#include "Game.h"
 
 namespace CaveRun {
     Player::Player(std::vector<int> _currentRoomPosition)
@@ -28,6 +29,11 @@ namespace CaveRun {
 
         if (isPoisoned()) { takeDamage(poisonRoom.getPoisonDamage()); }
         return getCurrentRoomPosition();
+    }
+
+    void Player::sense(const Game &game) const {
+        std::vector<int> monsterPosition = game.getMonsterPosition();
+        std::cout << "Monster position: " << "{" << monsterPosition[0] << ", " << monsterPosition[1] << "}"<< std::endl;
     }
 
 

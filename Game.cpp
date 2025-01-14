@@ -9,7 +9,11 @@
 #include "Map.h"
 
 namespace CaveRun {
-    Game::Game(int rows, int cols, const std::vector<int> &_startRoomPosition, const std::vector<int> &_endRoomPosition) {
+    Game::Game(int _rows, int _cols, const std::vector<int> &_startRoomPosition, const std::vector<int> &_endRoomPosition):
+      rows(_rows),
+      cols(_cols),
+      startRoomPosition(_startRoomPosition), // Initialize startRoomPosition
+      endRoomPosition(_endRoomPosition) {
         // setup graphics
 
 
@@ -25,6 +29,9 @@ namespace CaveRun {
 
         std::cout << "Active player is: " << activeCharacter->getName() << std::endl;
         std::cout << "Player health: " << player->getHealth() << std::endl;
+
+        player->sense(*this);
+        monster->sense(*this);
     }
 
     Game::~Game() {
@@ -32,6 +39,9 @@ namespace CaveRun {
     delete player;
     delete monster;
     }
+
+    std::vector<int> Game::getMonsterPosition() const { return monster->getCurrentRoomPosition(); }
+    std::vector<int> Game::getPlayerPosition() const { return player->getCurrentRoomPosition(); }
 
 
 

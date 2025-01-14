@@ -15,6 +15,8 @@ namespace CaveRun {
         Monster(const std::vector<int> &_currentRoomPosition);
 
         ~Monster() override;
+
+        void sense(const Game& game) const override;
     };
 
 } // CaveRun

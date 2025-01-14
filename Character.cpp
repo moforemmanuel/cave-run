@@ -3,7 +3,7 @@
 //
 
 #include "Character.h"
-
+#include "Game.h"
 #include <utility>
 
 namespace CaveRun {

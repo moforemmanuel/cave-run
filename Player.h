@@ -6,6 +6,7 @@
 #define PLAYER_H
 #include "Character.h"
 #include "PoisonRoom.h"
+#include "Game.h"
 
 namespace CaveRun {
     class Player : public Character {
@@ -27,6 +28,7 @@ namespace CaveRun {
 
         std::vector<int> move(const std::vector<int> &position, const PoisonRoom &poisonRoom);
 
+        void sense(const Game& game) const override;
     };
 
 } // CaveRun

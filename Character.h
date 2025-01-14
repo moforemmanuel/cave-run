@@ -8,9 +8,11 @@
 #include <iostream>
 #include <vector>
 // #include "Room.h"
-#include "Game.h"
+// #include "Game.h"
 
 namespace CaveRun {
+    class Game;
+
     class Character {
         std::string id;
         std::string name;
@@ -44,7 +46,7 @@ namespace CaveRun {
         bool canMove(const Game& game) const;
         virtual void resetMoves();
         std::vector<int> move(const std::vector<int> &position);
-        // virtual void sense(const Game& game) const;
+        virtual void sense(const Game& game) const = 0;
         // virtual void update();
         virtual void draw();
     };
